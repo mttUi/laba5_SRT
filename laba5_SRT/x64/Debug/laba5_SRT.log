@@ -1,0 +1,7 @@
+﻿  laba5_SRT.cpp
+C:\Users\balyb\source\repos\laba5_SRT\laba5_SRT.cpp(145,53): warning C4244: =: преобразование "_Rep" в "int", возможна потеря данных
+C:\Users\balyb\source\repos\laba5_SRT\laba5_SRT.cpp(145,53): warning C4244:         with
+C:\Users\balyb\source\repos\laba5_SRT\laba5_SRT.cpp(145,53): warning C4244:         [
+C:\Users\balyb\source\repos\laba5_SRT\laba5_SRT.cpp(145,53): warning C4244:             _Rep=__int64
+C:\Users\balyb\source\repos\laba5_SRT\laba5_SRT.cpp(145,53): warning C4244:         ]
+  laba5_SRT.vcxproj -> C:\Users\balyb\source\repos\laba5_SRT\x64\Debug\laba5_SRT.exe

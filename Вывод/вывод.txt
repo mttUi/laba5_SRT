@@ -1,0 +1,39 @@
+LABORATORNAYa RABOTA #4: TRI TOLSTYAKA
+Polzovatelsky myutex na osnove compare_exchange
+======================================================
+Nachalnye usloviya: 3000 naggetsov v kajdoy tarelke
+Tolstyaki lopayutsya posle 10000 naggetsov kajdy
+Simulyatsiya zakanchivaetsya posle 5 dney (5 sekund)
+======================================================
+
+===== STsENARY 1: Povar uvolen =====
+Parametry: effektivnost=5, appetite=150
+Rezultaty cherez 5 sekund:
+- Syedeno tolstyakami: 3000, 3000, 3000
+- Ostalos v tarelkakh: 105, 105, 105
+ITOG: NEUDACHA - Cel ne dostignuta
+   (Prichiny: vremya istaklo, )
+
+===== STsENARY 2: Povar bez zarplaty =====
+Parametry: effektivnost=300, appetite=250
+Rezultaty cherez 0 sekund:
+- Syedeno tolstyakami: 11000, 10000, 11500
+- Ostalos v tarelkakh: 5200, 6200, 4700
+ITOG: USPEKH - Povar ne poluchil zarplatu! (vse lopnuli do 5 dney)
+
+===== STsENARY 3: Povar uvolilsya sam =====
+Parametry: effektivnost=20, appetite=15
+Rezultaty cherez 0 sekund:
+- Syedeno tolstyakami: 19065, 10005, 14835
+- Ostalos v tarelkakh: 3455, 12515, 7685
+ITOG: NEUDACHA - Cel ne dostignuta
+   (Prichiny: vse lopnuli)
+
+======================================================
+DEMONSTRATsIYa RABOTY POLZOVATELSKOGO MYUTEXA:
+1. Ispolzuet atomarnuyu peremennuyu s compare_exchange_weak
+2. Realizuet lock/unlock mechanismy
+3. Obespechivaet vzaimnoe isklyuchenie dlya kriticheskih sektsiy
+4. Vse tri stsenarya demonstriruyut pravilnuyu sinhronizatsiyu
+
+Programma zavershena uspeshno.
